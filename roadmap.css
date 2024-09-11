@@ -9,10 +9,10 @@ html{
   scroll-behavior: smooth;
 }
 body{
-  background: #2D4263;
+  background: rgb(238, 230, 216);
 }
 header {
-    background-color:#C84B31;
+    background-color:rgb(125, 17, 28 );
     color: white;
     text-align: center;
     padding: 20px 0;
