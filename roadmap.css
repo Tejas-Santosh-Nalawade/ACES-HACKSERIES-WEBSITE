@@ -9,10 +9,10 @@ html{
   scroll-behavior: smooth;
 }
 body{
-  background: rgb(238, 230, 216);
+  background: rgb(238 230 216);
 }
 header {
-    background-color:rgb(125, 17, 28 );
+    background-color:rgb(125 17 28);
     color: white;
     text-align: center;
     padding: 20px 0;
@@ -122,6 +122,180 @@ header {
 .row section .bottom a:hover{
   transform: scale(0.97);
 }
+
+/*Footer*/
+/* Footer Styles */
+.footer {
+  background-color: #2C2C2C;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+}
+
+.footer-content {
+  flex-direction: row;
+}
+
+.logo-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 12px;
+}
+
+.text-section h3 {
+  font-size: 2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.text-section p {
+  color: white;
+  text-align: center;
+}
+
+.text-section a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.socials-section,
+.links-section {
+  width: 25%;
+  margin-top: 24px;
+}
+
+.socials-section h4,
+.links-section h4 {
+  color: white;
+  font-weight: bold;
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.socials-section p,
+.links-section p {
+  color: white;
+  text-align: center;
+}
+
+.socials-section a,
+.links-section a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.copyright {
+  background-color: black;
+  text-align: center;
+  padding: 12px;
+}
+
+.copyright p {
+  color: white;
+  font-size: 0.875rem;
+}
+
+/* General Reset */
+
+
+/* Footer Styling */
+.footer {
+  background-color: #2C2C2C;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  padding: 63px 5%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.logo-text {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 100px; /* Adjust as necessary */
+  margin-right: 46px;
+}
+
+.institution-text h1 {
+  font-size: 24px; /* Adjust size as needed */
+  margin-bottom: 5px;
+}
+
+.social-links h2,
+.other-links h2 {
+  margin-bottom: 10px;
+}
+
+
+.social-links li,
+.other-links li {
+  padding: 5px 0;
+  list-style-type: none;
+}
+
+.social-links a,
+.other-links a {
+  color: white;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.social-links a:hover,
+.other-links a:hover {
+  color: #BBBBBB; /* Light grey for hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo-text {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .social-links, .other-links {
+    align-items: center;
+  }
+
+  .social-links ul, .other-links ul {
+    padding: 0;
+  }
+}
+
+/* Copyright */
+.copywright {
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+  background-color: #000000; /* Slightly darker background */
+}
+
+
 @media(max-width: 790px){
   .wrapper .center-line{
     left: 40px;
