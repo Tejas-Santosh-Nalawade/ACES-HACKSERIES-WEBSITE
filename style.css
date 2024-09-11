@@ -1,0 +1,299 @@
+*{
+    border: 0px;
+    padding: 0px;
+    margin: 0;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+body{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background-image: url("./images/backgr.jpeg") ;
+    background-repeat:no-repeat ;
+    background-size: cover;
+    background-position: center;   
+}
+
+body > section.bg-img > section > div > div > p{
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in forwards;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+.bg-img{
+    /* background-image: url("./images/backgr.jpeg"); */
+    background-repeat:no-repeat ;
+    background-size: cover;
+    background-position: center;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 9;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    padding: 17px ;
+    align-items: center;
+    width: 100%;
+    background-color:transparent;
+}
+.title{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.logo {
+    margin-top: 1rem;
+    height: 2.3rem;
+    display: flex;
+    margin-right:0 ;
+    margin-left: 10px;
+    justify-content: center;
+    align-items: center;
+    color:beige;
+}
+.para{
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+.title{
+    text-shadow: 1px 1px 4px red;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in forwards;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+body > div > div > div{
+    margin-top:27px ;
+}
+.signUpBlue{
+    color: gold;
+}
+.btn{
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out;
+}
+.navItems > a{
+    position: relative;
+    font-size: 1.2em;
+    color: beige;
+    font-weight: 500;
+    margin-left: 30px;
+    margin-right: 10px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.navItems > a::after{
+    content: '';
+    left: 0;
+    top: 20px;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background:beige ;
+    border-radius: 5px;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+.navItems > a:hover::after{
+    transform: scaleX(1);
+    transform-origin: right;
+}
+body > div > div > div > div > div.col-lg-7.text-center.text-lg-start.text-light > p > span{
+    color:gold;
+    font-weight: 500;
+}
+.mobile-header{
+    display: none;
+}
+body > header > div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.titleLogo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn {
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    animation: buttonBounce 0.1s ease-in-out;
+}
+
+@keyframes buttonBounce {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+/* General styles (above 1200px, default large screens) */
+
+/* Tablets (768px to 1024px) */
+@media (max-width: 1024px) {
+    header {
+        padding: 15px;
+    }
+    .logo {
+        height: 2rem;
+    }
+    .navItems > a {
+        font-size: 1.1em;
+    }
+    .title {
+        font-size: 2rem;
+    }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo {
+        height: 1.8rem;
+    }
+    .navItems > a {
+        font-size: 1em;
+        margin-left: 20px;
+        margin-right: 8px;
+    }
+    .title {
+        font-size: 1.8rem;
+    }
+    body {
+        background-position: right;
+    }
+}
+
+/* Small mobile (max-width: 480px) */
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    body {
+        background-position:right;
+        background-repeat: repeat;
+    }
+    .signUpBlue{
+        font-size: 1.3rem;
+    }
+    .para{
+        font-weight: 300;
+        font-size: 1.35rem;
+    }
+    body > section > section > div > div > p{
+        font-weight: 100;
+        font-size: 0.2rem;
+    }
+    .titleLogo {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .body > section > div > h1{
+        margin: 3rem;
+    }
+    .body>header>nav {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .title{
+        display:none ;
+    }
+    .logo {
+        height: 2rem;
+        display:none ;
+    }
+    .mobile-header {
+        display: inline;
+        font-size: 2em;
+        margin: 1rem;
+        font-family: 'Lobster', cursive;
+        color: #E2E2B6;
+    }
+    p{
+        text-shadow: 2px 2px 4px black;
+    }
+    body > section{
+        margin-top:1rem ;
+    }
+    .navItems {
+        display: flex;
+        margin-top: 0.9rem;
+        font-size: 1.3rem;
+        justify-content: space-evenly;
+        padding: 0;
+        width: 100%;
+    }
+    
+    body>div>div>div>div>div.col-lg-7.text-center.text-lg-start.text-light>h1 {
+        font-size: 2rem;
+        padding-bottom: 0.6rem;
+    
+}
+}
+/* Very small devices (320px to 480px) */
+@media (max-width: 380px) {
+    header{
+        position: static;
+    }
+    body > section > section > div{
+        padding: 10px;
+    }
+    .p-tag{
+        font-size: 0.1rem;
+    }
+    .navItems > a {
+        font-size: 0.8em;
+        margin-left: 15px;
+        margin-right: 5px;
+    }
+    .mobile-header {
+        font-size: 1.5em;
+    }
+    p {
+        font-size: 0.8em;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+}
+.logo-img {
+    margin-left: 15px;
+    height: 70px;
+}
+
+.titleLogo {
+    display: flex;
+    align-items: center;
+}
+
