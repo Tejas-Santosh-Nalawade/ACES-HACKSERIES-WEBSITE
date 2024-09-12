@@ -9,7 +9,7 @@
 body {
     background-image:  url("./images/backgr.jpeg"), url("./images/phoenix-raster.png");
     background-repeat: no-repeat;
-    background-size: cover, 40%; /* Ensures both images cover the area */
+    background-size: cover, 28%; /* Ensures both images cover the area */
     /* opacity: 0.5; */
     background-position: center center, center center; /* Centers both images */
     background-blend-mode: difference; /* Blends the images together */
@@ -116,12 +116,12 @@ body {
     }
 }
 header {
-    z-index: 9;
-    position: fixed;
+    z-index: auto;
+    position: relative;
     top: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 10px;
+    background-color: rgb(125 17 28);
+    padding: 4px;
 }
 
 .logo {
