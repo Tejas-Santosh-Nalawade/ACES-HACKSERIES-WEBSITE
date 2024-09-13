@@ -21,18 +21,133 @@ header a {
 header a:hover {
   color: #ffa500; /* Optional: Hover effect with the same paragraph color */
 }
+/* General styles */
+:root {
+    --bg-opacity: 1; /* Default opacity for background image */
+}
 
-
-
-
+/* General styles */
+:root {
+  --bg-opacity: 1; /* Default opacity for background image */
+}
 
 body {
-  /* background: url('./images/backgr.jpeg') no-repeat center ; */
-  background-size: contain;
-  /* background-blend-mode: multiply; */
-  color: white; /* Adjust text color for readability */
-  
+  background: url('./images/backgr.jpeg') no-repeat center center;
+  background-size: cover;
+  background-blend-mode: multiply; /* Optional: Adjust blend mode if needed */
+  color: white;
+  background-color: rgba(0, 0, 0, var(--bg-opacity)); /* Use opacity variable */
+  margin: 0; /* Ensure no default margin */
+  font-family: Arial, sans-serif; /* Set a readable font */
 }
+
+/* .section1 background */
+.section1 {
+  background-color: rgb(125, 17, 28);
+  background-image: url(images/phoenix-vector.svg), url(images/phoenix-vector.svg);
+  background-size: 28%;
+  background-position: center left, center right;
+  background-repeat: no-repeat;
+  position: relative;
+  padding-bottom: 50px; /* Adjust this to create space for the button */
+}
+
+/* Mobile view adjustments for .section1 */
+@media (max-width: 768px) {
+  body {
+      --bg-opacity: 0.4; /* More reduced opacity for mobile view */
+  }
+
+  .section1 {
+      background-image: url(images/phoenix-vector.svg);
+      background-size: 100%; /* Ensure only one image is visible */
+      background-position: center;
+      padding: 20px; /* Add padding for better spacing on mobile */
+  }
+
+  .section1::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+      z-index: -1; /* Ensure overlay is behind text */
+  }
+
+  .section1 .button-container {
+      position: relative; /* Reset positioning for mobile view */
+      margin-top: 20px; /* Add margin to create space for the button */
+      text-align: center;
+  }
+}
+
+/* Additional adjustments for very small devices */
+@media (max-width: 576px) {
+  body {
+      --bg-opacity: 0.2; /* Further reduced opacity for very small screens */
+  }
+}
+
+/* Button and other styles */
+.section1 .btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #ffcc00; /* Bright button color to attract attention */
+  color: #000;
+  text-transform: uppercase;
+  border-radius: 25px; /* Rounded edges for modern style */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Button shadow for depth */
+  transition: background-color 0.3s ease;
+}
+
+.section1 .btn:hover {
+  background-color: #ff9900; /* Button color change on hover */
+}
+
+/* Paragraph styling */
+.para {
+  font-size: 1rem; /* Use relative units like rem for responsiveness */
+  line-height: 1.5; /* Slightly adjusted for better text flow */
+  text-align: center; /* Center align text for a balanced look */
+  max-width: 800px; /* Limit width for readability on large screens */
+  margin-left: auto; /* Center alignment horizontally */
+  margin-right: auto; /* Center alignment horizontally */
+  z-index: 1; /* Ensure text is above other elements */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .para {
+      font-size: 0.9rem; /* Slightly smaller font size for tablets */
+      line-height: 1.7; /* Adjust line height for better readability */
+      padding: 0 10px; /* Add horizontal padding on smaller screens */
+      text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .para {
+      font-size: 0.85rem; /* Smaller font size for mobile landscape */
+      line-height: 1.6; /* Adjust line height for readability */
+      padding: 0 8px; /* Add horizontal padding on smaller screens */
+      text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .para {
+      font-size: 0.8rem; /* Smaller font size for mobile portrait */
+      line-height: 1.5; /* Adjust line height for better text spacing */
+      text-align: center;
+      padding: 0 5px; /* Add horizontal padding for better spacing */
+  }
+}
+
+
+
+
 .btn {
   background-color: #FFAF61;
   border: none;
