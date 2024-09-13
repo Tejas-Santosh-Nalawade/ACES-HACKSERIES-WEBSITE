@@ -1,10 +1,83 @@
 /* General styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
+
+header {
+position: sticky;
+top: 0;
+z-index: 8;
+background-color: rgb(125, 17, 28); /* Match section1 theme */
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for depth */
+transition: background-color 0.3s ease-in-out; /* Smooth transition effect */
+}
+
+header a {
+color: white; /* Ensure the text is readable */
+}
+
+header a:hover {
+color: #ffa500; /* Optional: Hover effect with the same paragraph color */
+}
+
+body {
+background: url('./images/backgr.jpeg') no-repeat center center;
+background-size: cover;
+background-blend-mode: multiply; /* Optional: Blend mode for a smoother look */
+}
+
+.navItems a {
+  color: white; /* Ensure navbar links are readable */
+  text-decoration: none;
+}
+
+.navItems a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile Navbar */
+.navbar-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar-nav .nav-item {
+  margin-bottom: 10px;
+}
+
+.navbar-nav .nav-link {
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Subtle hover effect */
+}
+
+/* Specific Sections */
+.section1 {
+  background-color: rgb(125, 17, 28); /* Match section1 theme */
+}
+
+.title {
+  font-size: 2rem; /* Adjust for better visibility */
+}
+
+.section2,
+.section3 {
+  background: rgba(255, 255, 255, 0.8); /* Light background for sections */
+  color: #333; /* Dark text for readability */
+}
+
+.paragraph1,
+.paragraph2 {
+  font-size: 1.1rem; /* Adjust font size for better readability */
+}
+
+
 header {
   position: sticky;
   top: 0;
@@ -44,13 +117,23 @@ body {
 /* .section1 background */
 .section1 {
   background-color: rgb(125, 17, 28);
-  background-image: url(images/phoenix-vector.svg), url(images/phoenix-vector.svg);
+  background-image: url(images/phoenix-raster-1.png), url(images/phoenix-vector.svg);
+  /* transform: rotateX(180deg); */
   background-size: 28%;
   background-position: center left, center right;
   background-repeat: no-repeat;
   position: relative;
   padding-bottom: 50px; /* Adjust this to create space for the button */
 }
+.element {
+    background-image: url('path/to/your-image.jpg');
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-repeat: repeat; /* Repeat the image both horizontally and vertically */
+    background-repeat: repeat-x; /* Repeat the image horizontally */
+    background-repeat: repeat-y; /* Repeat the image vertically */
+}
+
+
 
 /* Mobile view adjustments for .section1 */
 @media (max-width: 768px) {
@@ -174,7 +257,7 @@ body {
 /* Phonix image changes  */
 .section1 {
     background-color: rgb(125, 17, 28);
-    background-image: url(images/phoenix-vector.svg), url(images/phoenix-vector.svg);
+    background-image: url(images/phoenix-raster1.png), url(images/phoenix-vector.svg);
     background-size: 28%;
     background-position: center left, center right;
     background-repeat: no-repeat;
@@ -188,11 +271,24 @@ body {
     left: 50%;
     transform: translateX(-50%);
 }
+@media (max-width: 796px) {
+  .section1 {
+      background-image: url(images/phoenix-vector.svg);
+      background-size: 70%; /* Ensure only one image is visible */
+      background-position: center;
+  }
+
+  .section1 .button-container {
+      position: relative; /* Reset positioning for mobile view */
+      margin-top: 20px; /* Add margin to create space for the button */
+      text-align: center;
+  }
+}
 
 @media (max-width: 768px) {
     .section1 {
         background-image: url(images/phoenix-vector.svg);
-        background-size: 100%; /* Ensure only one image is visible */
+        background-size: 70%; /* Ensure only one image is visible */
         background-position: center;
     }
 
@@ -201,6 +297,46 @@ body {
         margin-top: 20px; /* Add margin to create space for the button */
         text-align: center;
     }
+}
+@media (max-width: 692px) {
+  .section1 {
+      background-image: url(images/phoenix-vector.svg);
+      background-size: 70%; /* Ensure only one image is visible */
+      background-position: center;
+  }
+
+  .section1 .button-container {
+      position: relative; /* Reset positioning for mobile view */
+      margin-top: 20px; /* Add margin to create space for the button */
+      text-align: center;
+  }
+}
+@media (max-width: 577px) {
+  .section1 {
+      background-image: url(images/phoenix-vector.svg);
+      background-size: 80%; /* Ensure only one image is visible */
+      background-position: center;
+  }
+
+  .section1 .button-container {
+      position: relative; /* Reset positioning for mobile view */
+      margin-top: 20px; /* Add margin to create space for the button */
+      text-align: center;
+  }
+}
+@media (max-width: 418px) {
+  .section1 {
+      background-image: url(images/phoenix-vector.svg);
+      background-size: 80%; /* Ensure only one image is visible */
+      background-position: center;
+
+  }
+
+  .section1 .button-container {
+      position: relative; /* Reset positioning for mobile view */
+      margin-top: 20px; /* Add margin to create space for the button */
+      text-align: center;
+  }
 }
 
 .section1 .btn {
@@ -283,20 +419,12 @@ body {
 
 
 /* Responsive Adjustments */
-@media (max-width: 992px) {
-    .para {
-        font-size: 0.9rem; /* Slightly smaller font size for tablets */
-        line-height: 1.7; /* Adjust line height for better readability */
-        padding: 0 10px; /* Add horizontal padding on smaller screens */
-        text-align: center;
-    }
-}
 
-@media (max-width: 768px) {
+@media (max-width: 796px) {
     .para {
         font-size: 0.85rem; /* Smaller font size for mobile landscape */
-        line-height: 1.6; /* Adjust line height for readability */
-        padding: 0 8px; /* Add horizontal padding on smaller screens */
+        line-height: 30px; /* Adjust line height for readability */
+         /* Add horizontal padding on smaller screens */
         text-align: center;
  
     }
@@ -304,7 +432,7 @@ body {
 
 @media (max-width: 576px) {
     .para {
-        font-size: 0.8rem; /* Smaller font size for mobile portrait */
+        font-size: 2rem; /* Smaller font size for mobile portrait */
         line-height: 1.5; /* Adjust line height for better text spacing */
         text-align: left; /* Left-align text on very small screens */
         padding: 0 5px; /* Add horizontal padding for better spacing */
