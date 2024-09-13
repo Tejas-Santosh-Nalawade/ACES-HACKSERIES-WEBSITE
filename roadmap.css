@@ -9,11 +9,11 @@ html{
   scroll-behavior: smooth;
 }
 body{
-  background: rgb(238 230 216);
+  background: rgb(125 17 28);
 }
 header {
-    background-color:rgb(125 17 28);
-    color: white;
+    background-color:white;
+    color: black;
     text-align: center;
     padding: 20px 0;
     font-size: 1.8rem;
@@ -323,3 +323,7 @@ header {
     margin: 10px 0;
   }
 }
+
+
+
+/* HEADER */

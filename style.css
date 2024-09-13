@@ -5,19 +5,130 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
-
-body {
-    background-image:  url("./images/backgr.jpeg"), url("./images/phoenix-raster.png");
-    background-repeat: no-repeat;
-    background-size: cover, 28%; /* Ensures both images cover the area */
-    /* opacity: 0.5; */
-    background-position: center center, center center; /* Centers both images */
-    background-blend-mode: difference; /* Blends the images together */
-    line-height: 1.6;
-    color: white;
-    z-index: -1;
+header {
+  position: sticky;
+  top: 0;
+  z-index: 8;
+  background-color: rgb(125, 17, 28); /* Match section1 theme */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for depth */
+  transition: background-color 0.3s ease-in-out; /* Smooth transition effect */
 }
 
+header a {
+  color: white; /* Ensure the text is readable */
+}
+
+header a:hover {
+  color: #ffa500; /* Optional: Hover effect with the same paragraph color */
+}
+
+
+
+
+
+body {
+  /* background: url('./images/backgr.jpeg') no-repeat center ; */
+  background-size: contain;
+  /* background-blend-mode: multiply; */
+  color: white; /* Adjust text color for readability */
+  
+}
+.btn {
+  background-color: #FFAF61;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  transition: background-color 0.5s ease;
+}
+
+.btn:hover {
+  background-color: #e6954f;
+  transform: scale(1.5);
+}
+
+.para, .paragraph1 ,.paragraph2{
+  color: #f8f9fa; /* Light color for contrast */
+
+  /* text-shadow: 2px 2px 4px rgba(0,0,0,0.5); */
+}
+.para {
+    font-size: 1rem; /* Use relative units like rem for responsiveness */
+    line-height: 1.5; /* Slightly adjusted for better text flow */
+}
+
+/* Phonix image changes  */
+.section1 {
+  background-color: rgb(125, 17, 28);
+  background-image: url(images/phoenix-vector.svg), url(images/phoenix-vector.svg);
+  background-size: 28%;
+  background-position: center left, center right;
+  background-repeat: no-repeat;
+  position: relative;
+  padding-bottom: 50px; /* Adjust this to create space for the button */
+}
+
+.section1 .button-container {
+  position: absolute;
+  bottom: 20px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+  .section1 {
+      background-image: url(images/phoenix-vector.svg);
+      background-size: 100%; /* Ensure only one image is visible */
+      background-position: center;
+  }
+
+  .section1 .button-container {
+      position: relative; /* Reset positioning for mobile view */
+      margin-top: 20px; /* Add margin to create space for the button */
+      text-align: center;
+  }
+}
+
+.section1 .btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #ffcc00; /* Bright button color to attract attention */
+  color: #000; 
+  text-transform: uppercase;
+  border-radius: 25px; /* Rounded edges for modern style */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Button shadow for depth */
+  transition: background-color 0.3s ease;
+}
+
+.section1 .btn:hover {
+  background-color: #ff9900; /* Button color change on hover */
+}
+.section2{
+    background-color:  #2C2C2C;
+    color: #daae11;
+}
+.section3{
+    background-color:  rgb(238 230 216);
+}
+.paragraph1{
+  color: #FFAF61;
+  text-align: justify ;
+  /* background-color: #FFAF61 ; */
+}
+.paragraph2{
+  color: rgb(46, 45, 42);
+  text-align: justify;
+  /* background-color: #FFAF61 ; */
+}
+/* .para{
+  text-align: left;
+} */
+.text-highlight-section0{
+  padding-bottom: 10px;
+}
+.hack
+{
+  padding-bottom: 100px;
+}
 /* General Paragraph Styling */
 .para {
     font-family: 'Poppins', sans-serif; /* Use a modern and clean font */
@@ -27,22 +138,34 @@ body {
     margin: 1.5 rem 1 rem 1rem 1rem; /* Add bottom margin to space out paragraphs */
     padding: 0; /* Remove default padding */
     text-align: center; /* Center align text for a balanced look */
-    color: #f8f9fa; /* Light color for text to contrast with dark backgrounds */
+    /* color: #f8f9fa; Light color for text to contrast with dark backgrounds */
     max-width: 800px; /* Limit width for readability on large screens */
     margin-left: auto; /* Center alignment horizontally */
     margin-right: auto; /* Center alignment horizontally */
+    /* color: black; */
 }
 .text-highlight-section1
 {
     color: rgb(240, 248, 255);
     margin: 2px;
     padding: 12px;
+
 }
 .text-highlight-section2
 {
-    margin: 5px;
-    padding: 10px;
+    margin: 2px;
+    padding: 12px;
+    color:rgb(240, 248, 255);
+  }
+  @media (max-width: 768px) {
+    .logo {
+        display: none;
+    }
+    .mobile-header {
+        display: block;
+    }
 }
+
 
 /* Responsive Adjustments */
 @media (max-width: 992px) {
@@ -82,7 +205,7 @@ body {
 
 @media (max-width: 768px) {
     body {
-        background-image:  url("./images/back.jpeg"), url("./images/phoenix-raster.png");
+        /* background-image:  url("./images/back.jpeg"), url("./images/phoenix-raster.png"); */
         background-size: cover, 40%; /* Ensures both images cover the area */
         
         background-position: center center, center center; /* Centers both images */
@@ -91,9 +214,15 @@ body {
     }  
     
 }
+@media (max-width: 576px) {
+  .para {
+      padding: 0 12px;
+  }
+}
+
 @media (max-width: 618px) {
     body {
-        background-image:  url("./images/back.jpeg"), url("./images/phoenix-raster.png");
+        /* background-image:  url("./images/back.jpeg"), url("./images/phoenix-raster.png"); */
         background-repeat: no-repeat;
         background-size: cover, 40%; /* Ensures both images cover the area */
         background-position: center center, center center; /* Centers both images */
@@ -106,7 +235,7 @@ body {
 /* Additional adjustments for very small devices (if needed) */
 @media (max-width: 576px) {
     body {
-         background-image:  url("./images/back.jpeg"), url("./images/phoenix-raster.png");
+        /* background-image:  url("./images/back.jpeg"), url("./images/phoenix-raster.png"); */
         background-repeat: no-repeat;
         background-size: cover, 40%; /* Ensures both images cover the area */
         background-position: center center, center center; /* Centers both images */
@@ -114,14 +243,6 @@ body {
         line-height: 1.6;
         color: white;
     }
-}
-header {
-    z-index: auto;
-    position: relative;
-    top: 0;
-    width: 100%;
-    background-color: rgb(125 17 28);
-    padding: 4px;
 }
 
 .logo {
@@ -162,10 +283,13 @@ header {
 
 .title {
     font-family: 'DM Serif Display', serif;
-    text-shadow: 1px 1px 4px red;
-    opacity: 0;
+    /* text-shadow: 1px 1px 4px rgb(85, 8, 8); */
+    text-shadow: 1px 1px 4px rgb(95, 3, 3);
+
+    opacity: 0.95;
     animation: fadeIn 1.5s ease-in forwards;
 }
+
 
 @keyframes fadeIn {
     from {
@@ -176,14 +300,14 @@ header {
     }
 }
 
-.btn {
+/* .btn {
     text-decoration: none;
     transition: transform 0.3s ease-in-out;
 }
 
 .btn:hover {
     transform: scale(1.1);
-}
+} */
 
 .logo-img {
     height: 50px;
@@ -234,3 +358,271 @@ header {
         font-size: 0.9rem;
     }
 }
+/*Footer*/
+/* Footer Styles */
+.footer {
+    background-color: #2C2C2C;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+  }
+  
+  .footer-content {
+    flex-direction: row;
+  }
+  
+  .logo-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 12px;
+  }
+  
+  .text-section h3 {
+    font-size: 2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  
+  .text-section p {
+    color: white;
+    text-align: center;
+  }
+  
+  .text-section a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .socials-section,
+  .links-section {
+    width: 25%;
+    margin-top: 24px;
+  }
+  
+  .socials-section h4,
+  .links-section h4 {
+    color: white;
+    font-weight: bold;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  
+  .socials-section p,
+  .links-section p {
+    color: white;
+    text-align: center;
+  }
+  
+  .socials-section a,
+  .links-section a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .copyright {
+    background-color: black;
+    text-align: center;
+    padding: 12px;
+  }
+  
+  .copyright p {
+    color: white;
+    font-size: 0.875rem;
+  }
+  
+  /* General Reset */
+  
+  
+  /* Footer Styling */
+  .footer {
+    background-color: #2C2C2C;
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-content {
+    display: flex;
+    padding: 63px 5%;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .logo-text {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 100px; /* Adjust as necessary */
+    margin-right: 46px;
+  }
+  
+  .institution-text h1 {
+    font-size: 24px; /* Adjust size as needed */
+    margin-bottom: 5px;
+  }
+  
+  .social-links h2,
+  .other-links h2 {
+    margin-bottom: 10px;
+  }
+  
+  
+  .social-links li,
+  .other-links li {
+    padding: 5px 0;
+    list-style-type: none;
+  }
+  
+  .social-links a,
+  .other-links a {
+    color: white;
+    transition: color 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .social-links a:hover,
+  .other-links a:hover {
+    color: #BBBBBB; /* Light grey for hover */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .logo-text {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .social-links, .other-links {
+      align-items: center;
+    }
+  
+    .social-links ul, .other-links ul {
+      padding: 0;
+    }
+  }
+  
+  /* Copyright */
+  .copywright {
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    background-color: #000000; /* Slightly darker background */
+  }
+  
+  
+  @media(max-width: 790px){
+    .wrapper .center-line{
+      left: 40px;
+    }
+    .wrapper .row{
+      margin: 30px 0 3px 60px;
+    }
+    .wrapper .row section{
+      width: 100%;
+    }
+    .row-1 section::before{
+      left: -7px;
+    }
+    .row-1 section .icon{
+      left: -60px;
+    }
+  }
+  @media(max-width: 440px){
+    .wrapper .center-line,
+    .row section::before,
+    .row section .icon{
+      display: none;
+    }
+    .wrapper .row{
+      margin: 10px 0;
+    }
+  }
+
+/* Custom hover effects */
+.nav-link {
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background-color: rgba(0, 123, 255, 0.1); /* Light blue overlay */
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.3s ease;
+  border-radius: 50%;
+}
+
+.nav-link:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.nav-link:hover {
+  color: #00bcd4; /* Color change on hover */
+  background-color: rgba(255, 255, 255, 0.1); /* Light background on hover */
+}
+
+
+
+ 
+Header section animation
+.section1, .section2, .section3 {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.5s ease-in-out;
+  }
+
+Animation triggered when in view
+.section1.aos-animate, .section2.aos-animate, .section3.aos-animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+.logo-img:hover {
+  transform: rotate(360deg);
+  transition: transform 1s ease-in-out; /* Slower for smoother effect */
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect on buttons
+.btn:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
+  background-color: #FFAF61;
+}
+
+Image hover effect
+  .logo-img:hover {
+  transform: rotate(360deg);
+  transition: 0.6s;
+}  */
+
+
