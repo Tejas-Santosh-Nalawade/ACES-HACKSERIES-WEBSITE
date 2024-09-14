@@ -247,7 +247,7 @@ header {
   left: 50%;
   width: 200%;
   height: 200%;
-  background-color: rgb(238, 230, 216); /* Light blue overlay */
+  /* background-color: rgb(238, 230, 216); Light blue overlay */
   transform: translate(-50%, -50%) scale(0);
   transition: transform 0.3s ease;
   border-radius: 50%;

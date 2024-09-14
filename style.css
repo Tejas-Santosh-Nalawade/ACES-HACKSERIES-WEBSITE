@@ -50,7 +50,7 @@ color: #ffa500; /* Optional: Hover effect with the same paragraph color */
 }
 
 .navbar-nav .nav-link:hover {
-  background-color: rgba(255, 255, 255, 0.2); /* Subtle hover effect */
+  background-color: rgb(125, 17, 28);; /* Subtle hover effect */
 }
 
 /* Specific Sections */
@@ -527,7 +527,6 @@ body {
   color:#000000;
   background: #B4FF39;
 }
-
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -812,7 +811,7 @@ h2{
   left: 50%;
   width: 200%;
   height: 200%;
-  background-color: rgba(0, 123, 255, 0.1); /* Light blue overlay */
+  /* background-color: rgb(238, 230, 216); Light blue overlay */
   transform: translate(-50%, -50%) scale(0);
   transition: transform 0.3s ease;
   border-radius: 50%;
