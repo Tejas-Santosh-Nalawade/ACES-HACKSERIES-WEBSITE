@@ -523,7 +523,10 @@ body {
     opacity: 0.95;
     animation: fadeIn 1.5s ease-in forwards;
 }
-
+::selection{
+  color:#000000;
+  background: #B4FF39;
+}
 
 @keyframes fadeIn {
     from {

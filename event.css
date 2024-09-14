@@ -293,6 +293,10 @@ header {
   
       
     }
+    ::selection{
+      color:#000000;
+      background: #B4FF39;
+    }
   
     
     .ag-courses-item_link {

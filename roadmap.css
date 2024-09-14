@@ -17,11 +17,22 @@ header {
     text-align: center;
     padding: 20px 0;
     font-size: 1.8rem;
+
   }
-::selection{
-  color: #fff;
-  background: #ff7979;
+  h1{
+    font-family: 'DM Serif Display', serif;
+  }
+  .text-highlight-section1
+{
+    color: rgb(240, 248, 255);
+    margin: 2px;
+    padding: 12px;
+
 }
+ ::selection{
+      color:#030101;
+      background: #B4FF39;
+    }
 .wrapper{
   max-width: 1080px;
   margin: 50px auto;
@@ -32,7 +43,7 @@ header {
   position: absolute;
   height: 100%;
   width: 4px;
-  background: #fff;
+  background: hsl(0, 0%, 100%);
   left: 50%;
   top: 20px;
   transform: translateX(-50%);
@@ -47,7 +58,7 @@ header {
   justify-content: flex-end;
 }
 .wrapper .row section{
-  background: #fff;
+  background: #eee6d8;
   border-radius: 5px;
   width: calc(50% - 40px);
   padding: 20px;
@@ -58,7 +69,7 @@ header {
   content: "";
   height: 15px;
   width: 15px;
-  background: #fff;
+  background: #EEE6D8;
   top: 28px;
   z-index: -1;
   transform: rotate(45deg);
@@ -323,7 +334,3 @@ header {
     margin: 10px 0;
   }
 }
-
-
-
-/* HEADER */
