@@ -23,11 +23,6 @@ header a:hover {
 color: #ffa500; /* Optional: Hover effect with the same paragraph color */
 }
 
-body {
-background: url('./images/backgr.jpeg') no-repeat center center;
-background-size: cover;
-background-blend-mode: multiply; /* Optional: Blend mode for a smoother look */
-}
 
 .navItems a {
   color: white; /* Ensure navbar links are readable */
@@ -105,7 +100,6 @@ header a:hover {
 }
 
 body {
-  background: url('./images/backgr.jpeg') no-repeat center center;
   background-size: cover;
   background-blend-mode: multiply; /* Optional: Adjust blend mode if needed */
   color: white;
@@ -833,27 +827,71 @@ body {
 
 
  
-Header section animation
+/* Base animation styles */
 .section1, .section2, .section3 {
   opacity: 0;
-  transform: translateY(50px);
-  transition: all 0.5s ease-in-out;
-  }
+  transform: translateY(40px); /* Slightly more movement for emphasis */
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
 
-Animation triggered when in view
+/* Animation triggered when in view */
 .section1.aos-animate, .section2.aos-animate, .section3.aos-animate {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Logo image rotation on hover */
+.logo-img {
+  transition: transform 1s ease-in-out; /* Smooth rotation */
+}
+
 .logo-img:hover {
   transform: rotate(360deg);
-  transition: transform 1s ease-in-out; /* Slower for smoother effect */
+}
+
+/* Button scaling on hover */
+.btn {
+  transition: transform 0.3s ease-in-out; /* Smooth scaling */
 }
 
 .btn:hover {
-  transform: scale(1.05);
-  transition: all 0.3s ease-in-out;
+  transform: scale(1.1); /* Emphasis on hover */
 }
+
+/* Mobile Navbar animations */
+.navbar-nav .nav-item {
+  animation: slideIn 0.5s ease-out; /* Smooth slide-in animation */
+}
+
+/* Keyframes for slide-in animation */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px); /* Slide in from the left */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 767px) {
+  /* Adjust animations for mobile */
+  .section1, .section2, .section3 {
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out; /* Faster transitions */
+    transform: translateY(30px); /* Reduced movement for mobile */
+  }
+  
+  .logo-img {
+    transition: transform 0.8s ease-in-out; /* Slightly shorter duration for mobile */
+  }
+  
+  .btn {
+    transition: transform 0.2s ease-in-out; /* Faster scaling effect for mobile */
+  }
+}
+
 
 /* Hover effect on buttons
 .btn:hover {
