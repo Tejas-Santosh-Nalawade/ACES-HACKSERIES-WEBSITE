@@ -55,7 +55,7 @@ color: #ffa500; /* Optional: Hover effect with the same paragraph color */
 
 /* Specific Sections */
 .section1 {
-  background-color: rgb(125, 17, 28); /* Match section1 theme */
+  background-color: rgb(160, 49, 60); /* Match section1 theme */
 }
 
 .title {
@@ -79,7 +79,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 8;
-  background-color: rgb(125, 17, 28); /* Match section1 theme */
+  background-color: #2C2C2C; /* Match section1 theme */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for depth */
   transition: background-color 0.3s ease-in-out; /* Smooth transition effect */
 }
