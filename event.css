@@ -1,120 +1,273 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-    list-style: none;
-    text-decoration: none;
-    
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+header {
+  position: sticky;
+  top: 0;
+  z-index: 8;
+  background-color: rgb(125, 17, 28); /* Match section1 theme */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for depth */
+  transition: background-color 0.3s ease-in-out; /* Smooth transition effect */
   }
   
-  body{
+.navItems a {
+  color: white; /* Ensure navbar links are readable */
+  text-decoration: none;
+}
+
+.navItems a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile Navbar */
+.navbar-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar-nav .nav-item {
+  margin-bottom: 10px;
+}
+
+.navbar-nav .nav-link {
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: rgb(125, 17, 28); /* Subtle hover effect */
+}
+
   
-    background-color:beige;
+  header a {
+  color: white; /* Ensure the text is readable */
   }
   
-  
-  nav{
-    background: rgb(141, 18, 30);
-    height: 80px;
-    width: 100%;
+  header a:hover {
+  color: #ffa500; /* Optional: Hover effect with the same paragraph color */
   }
-  label.logo{
-    color: white;
-    font-size: 35px;
-    line-height: 80px;
-  
-    font-weight: bold;
-    margin-bottom: 30px;
-  }
-  .logo-img {
-    height: 80px;
-  }
-  nav ul{
-    float: right;
-    margin-right: 20px;
-  }
-  nav ul li{
+  .section1 .btn {
     display: inline-block;
-    line-height: 80px;
-    margin: 0 5px;
-  }
-  nav ul li a{
-    color: white;
-    font-size: 17px;
-    padding: 7px 13px;
-    border-radius: 3px;
+    padding: 12px 25px;
+    background-color: #ffcc00; /* Bright button color to attract attention */
+    color: rgb(125, 17, 28);
     text-transform: uppercase;
+    border-radius: 25px; /* Rounded edges for modern style */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Button shadow for depth */
+    transition: background-color 0.3s ease;
   }
-  a.active,a:hover{
-    background: rgb(197, 13, 31);
-    transition: .5s;
+  
+  .section1 .btn:hover {
+    background-color: #ff9900; /* Button color change on hover */
   }
-  .checkbtn{
-    font-size: 30px;
-    color: white;
-    float: right;
-    line-height: 80px;
-    margin-right: 40px;
-    cursor: pointer;
-    display: none;
+.btn {
+  background-color: #FFAF61;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  transition: background-color 0.5s ease;
+}
+
+.btn:hover {
+  background-color: #e6954f;
+  transform: scale(1.5);
+}
+  
+  .navItems a {
+    color: white; /* Ensure navbar links are readable */
+    text-decoration: none;
   }
-  #check{
-    display: none;
+  
+  .navItems a:hover {
+    text-decoration: underline;
   }
-  @media (max-width: 952px){
-    label.logo{
-      font-size: 30px;
-      padding-left: 50px;
-    }
-    nav ul li a{
-      font-size: 16px;
-    }
+  
+  /* Mobile Navbar */
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
   }
-  @media (max-width: 858px){
-    .checkbtn{
+  
+  .navbar-nav .nav-item {
+    margin-bottom: 10px;
+  }
+  
+  .navbar-nav .nav-link {
+    padding: 10px 15px;
+    border-radius: 5px;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    background-color: rgb(125, 17, 28); /* Subtle hover effect */
+  }
+  
+  /* Specific Sections */
+  .section1 {
+    background-color: rgb(160, 49, 60); /* Match section1 theme */
+  }
+  
+  .title {
+    font-size: 2rem; /* Adjust for better visibility */
+  }
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 8;
+    background-color: #2C2C2C; /* Match section1 theme */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for depth */
+    transition: background-color 0.3s ease-in-out; /* Smooth transition effect */
+  }
+  
+  header a {
+    color: white; /* Ensure the text is readable */
+  }
+  
+  header a:hover {
+    color: #ffa500; /* Optional: Hover effect with the same paragraph color */
+  }
+  .img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+  
+.logo {
+  font-size: 1.8rem;
+  text-shadow: 1px 1px 4px red;
+  font-family: 'DM Serif Display', serif;
+}
+
+.mobile-header {
+  display: none;
+  margin: auto;
+  padding-left: 10px;
+  font-size: 2rem;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.navItems a {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: beige;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.navItems a:hover {
+  text-decoration: underline;
+}
+/* To change Backgground */
+.bg-img {
+  background-color: rgb(238, 230, 216);
+  height: 100vh;
+  background-size: cover;
+}
+.title {
+  font-family: 'DM Serif Display', serif;
+  /* text-shadow: 1px 1px 4px rgb(85, 8, 8); */
+  text-shadow: 1px 1px 4px rgb(95, 3, 3);
+
+  opacity: 0.95;
+  animation: fadeIn 1.5s ease-in forwards;
+}
+
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+.logo-img {
+  height: 50px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .logo {
+      display: none;
+  }
+  .mobile-header {
       display: block;
-    }
-    ul{
-      position: fixed;
-      width: 100%;
-      height: 100vh;
-      background: #2c3e50;
-      top: 80px;
-      left: -100%;
+      font-size: 2rem;
+      font-family: 'Times New Roman', Times, serif;
+  }
+
+  .navItems {
+      justify-content: center;
       text-align: center;
-      transition: all .5s;
-    }
-    nav ul li{
-      display: block;
-      margin: 50px 0;
-      line-height: 30px;
-    }
-    nav ul li a{
-      font-size: 20px;
-    }
-    a:hover,a.active{
-      background: none;
-      color: #0082e6;
-    }
-    #check:checked ~ ul{
-      left: 0;
-    }
   }
-  section{
-    background: url(bg1.jpg) no-repeat;
-    background-size: cover;
-    height: calc(100vh - 80px);
+  .navItems a {
+      font-size: 1rem;
+      margin: 0 15px;
   }
-  
-  
-  
+
+  .title {
+      font-size: 2rem;
+  }
+
+  .para {
+      font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navItems a {
+      font-size: 0.8rem;
+  }
+  .mobile-header {
+      font-size: 2rem;
+      display: inline;
+      font-family: 'Times New Roman', Times, serif;
+  }
+  .title {
+      font-size: 1.5rem;
+  }
+  .para {
+      font-size: 0.9rem;
+  }
+}
+/* Custom hover effects */
+.nav-link {
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background-color: rgb(238, 230, 216); /* Light blue overlay */
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.3s ease;
+  border-radius: 50%;
+}
+
+.nav-link:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.nav-link:hover {
+  color: #00bcd4; /* Color change on hover */
+  background-color: rgba(255, 255, 255, 0.1); /* Light background on hover */
+}
   .ag-format-container {
-      width: 1142px;
+      width: 1519px;
       margin: 0 auto;
     } 
     .ag-courses_box {
+    /* Background */
+    background-color: rgb(238, 230, 216);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -144,11 +297,10 @@
     
     .ag-courses-item_link {
       display: block;
-      padding: 30px 20px;
+      padding: 40px 40px;
       background-color:#242424;
-    text-decoration: none;
+      text-decoration: none;
       overflow: hidden;
-    
       position: relative;
     }
     .ag-courses-item_link:hover,
@@ -206,22 +358,6 @@
       -o-transition: all .5s ease;
       transition: all .5s ease;
     }
-    /* .ag-courses_item:nth-child(2n) .ag-courses-item_bg {
-      background-color: #3ecd5e;
-    }
-    .ag-courses_item:nth-child(3n) .ag-courses-item_bg {
-      background-color: #e44002;
-    }
-    .ag-courses_item:nth-child(4n) .ag-courses-item_bg {
-      background-color: #952aff;
-    }
-    .ag-courses_item:nth-child(5n) .ag-courses-item_bg {
-      background-color: #cd3e94;
-    }
-    .ag-courses_item:nth-child(6n) .ag-courses-item_bg {
-      background-color: #4c49ea;
-    }
-     */
     
     
   
@@ -239,14 +375,38 @@
         font-size: 24px;
       }
     }
+    @media only screen and (max-width: 1521px) {
+      .ag-format-container {
+        width: 100%;
+      }
+    
+    }
     
     @media only screen and (max-width: 767px) {
       .ag-format-container {
-        width: 96%;
+        width: 100%;
       }
     
     }
     @media only screen and (max-width: 639px) {
+      .ag-courses_item {
+        -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+      }
+      .ag-courses-item_title {
+        min-height: 72px;
+        line-height: 1;
+    
+        font-size: 24px;
+      }
+      .ag-courses-item_link {
+        padding: 22px 40px;
+      }
+      .ag-courses-item_date-box {
+        font-size: 16px;
+      }
+    }
+        @media only screen and (max-width: 639px) {
       .ag-courses_item {
         -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
@@ -350,6 +510,10 @@
 .copyright p {
   color: white;
   font-size: 0.875rem;
+}
+h2{
+  margin: 18px;
+  margin-left: 25px;
 }
 
 /* General Reset */
