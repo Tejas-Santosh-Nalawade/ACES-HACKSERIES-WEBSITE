@@ -7,6 +7,7 @@
   font-family: "Poppins", sans-serif;
 }
 
+
 header {
 position: sticky;
 top: 0;
@@ -100,6 +101,134 @@ header a:hover {
 :root {
   --bg-opacity: 1; /* Default opacity for background image */
 }
+/* Form Container */
+.form-container {
+  width: 50%;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #EEE6D8;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+/* Contact Section */
+.contact-section {
+  background-color: #7D111C;
+  padding: 20px;
+}
+
+/* Contact Section Heading */
+.contact-section h2 {
+  text-align: center;
+}
+
+
+
+/* Form Labels */
+label {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  font-size: 18px;
+  color: #000;
+}
+
+/* Form Inputs and Textarea */
+input[type="email"],
+input[type="tel"],
+textarea {
+  margin-top: 5px;
+  padding: 12px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #000;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #800000;
+  box-shadow: 0 0 5px rgba(128, 0, 0, 0.3);
+  outline: none;
+}
+
+#message {
+  margin-bottom: 10px;
+}
+
+/* Button */
+button {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #000;
+  transform: translateY(-2px);
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablets */
+@media screen and (max-width: 768px) {
+  .form-container {
+    width: 80%;
+    margin: 30px auto;
+  }
+
+  label {
+    font-size: 14px;
+  }
+
+  input[type="email"],
+  input[type="tel"],
+  textarea {
+    padding: 10px;
+  }
+
+  button {
+    padding: 12px;
+  }
+}
+
+/* Mobile Phones */
+@media screen and (max-width: 480px) {
+  .form-container {
+    width: 95%;
+    margin: 20px auto;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  label {
+    font-size: 12px;
+  }
+
+  input[type="email"],
+  input[type="tel"],
+  textarea {
+    padding: 8px;
+  }
+
+  button {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
 
 body {
 
