@@ -97,10 +97,6 @@ header a:hover {
     --bg-opacity: 1; /* Default opacity for background image */
 }
 
-/* General styles */
-:root {
-  --bg-opacity: 1; /* Default opacity for background image */
-}
 /* Form Container */
 .form-container {
   width: 50%;
@@ -1022,19 +1018,3 @@ h2{
     transition: transform 0.2s ease-in-out; /* Faster scaling effect for mobile */
   }
 }
-
-
-/* Hover effect on buttons
-.btn:hover {
-  transform: scale(1.1);
-  transition: 0.3s ease-in-out;
-  background-color: #FFAF61;
-}
-
-Image hover effect
-  .logo-img:hover {
-  transform: rotate(360deg);
-  transition: 0.6s;
-}  */
-
-
