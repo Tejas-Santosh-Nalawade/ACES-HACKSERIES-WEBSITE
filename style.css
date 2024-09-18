@@ -65,7 +65,7 @@ color: #ffa500; /* Optional: Hover effect with the same paragraph color */
 
 .section2,
 .section3 {
-  background: rgba(255, 255, 255, 0.8); /* Light background for sections */
+  background-color: #e70505; /* Light background for sections */
   color: #333; /* Dark text for readability */
 }
 
@@ -474,7 +474,7 @@ body {
     color: #daae11;
 }
 .section3{
-    background-color:  rgb(238 230 216);
+    background-color:  #FADFA1;
 }
 .paragraph1{
   color: #FFAF61;
@@ -522,7 +522,8 @@ body {
 {
     margin: 2px;
     padding: 12px;
-    color:rgb(240, 248, 255);
+    color: #F0F8ff;
+    background-color: #FADFA1;
   }
   @media (max-width: 768px) {
     .logo {
