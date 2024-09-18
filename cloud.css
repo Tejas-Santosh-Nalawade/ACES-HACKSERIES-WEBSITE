@@ -19,6 +19,9 @@ header {
     font-size: 1.8rem;
 
   }
+  a{
+    text-decoration: none;
+  }
   h1{
     font-family: 'DM Serif Display', serif;
   }
@@ -334,3 +337,32 @@ header {
     margin: 10px 0;
   }
 }
+
+/* Icon style */
+.icon {
+  font-size: 40px;
+  color: #4CAF50; /* Match button color */
+}
+
+/* Button style */
+.hover-button {
+  text-align: center;
+  padding-left: 50px;
+  background-color: #000000; /* Green background */
+  color: white;              /* White text */
+  padding: 15px 32px;         /* Padding */
+  font-size: 16px;            /* Font size */
+  border: none;               /* No border */
+  border-radius: 8px;         /* Rounded corners */
+  cursor: pointer;            /* Pointer cursor */
+  transition: all 0.3s ease;  /* Smooth transition for hover effect */
+  margin-top: 10px;           /* Space between content and button */
+}
+
+/* Hover effect for the button */
+.hover-button:hover {
+  background-color: #780808;  /* Darker green on hover */
+      /* Slightly increase size */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Shadow effect */
+}
+
