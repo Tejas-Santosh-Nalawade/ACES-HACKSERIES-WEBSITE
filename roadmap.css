@@ -324,7 +324,7 @@ header {
     left: -60px;
   }
 }
-@media(max-width: 440px){
+@media(max-width: 44px){
   .wrapper .center-line,
   .row section::before,
   .row section .icon{
