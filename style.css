@@ -1056,7 +1056,9 @@ padding: 50px 0;
   background: #B4FF39;
 }
 
-
+.ag-courses_box{
+  margin: 0.3px;
+}
 .ag-courses-item_link {
   display: block;
   padding: 40px 40px;
