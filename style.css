@@ -522,7 +522,7 @@ body {
 {
     margin: 2px;
     padding: 12px;
-    color: #F0F8ff;
+    color: #2C2C2C;
     background-color: #FADFA1;
   }
   @media (max-width: 768px) {
@@ -1057,7 +1057,7 @@ padding: 50px 0;
 }
 
 .ag-courses_box{
-  margin: 0.5px;
+  margin: 0.3px;
 }
 .ag-courses-item_link {
   display: block;
@@ -1186,5 +1186,94 @@ padding: 50px 0;
   }
   .ag-courses-item_date-box {
     font-size: 16px;
+  }
+}
+
+/* General styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: #0a2a3d;
+  padding: 1rem;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li {
+  text-transform: uppercase;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #cfd8dc;
+}
+
+/* Hamburger icon styles */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .nav-links {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #0a2a3d;
+      width: 100%;
+      height: 0;
+      overflow: hidden;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      transition: height 0.3s ease;
+  }
+
+  .nav-links.active {
+      height: 200px; /* Adjust this based on the number of items */
+  }
+
+  .hamburger {
+      display: flex;
   }
 }
