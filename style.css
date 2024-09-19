@@ -1278,6 +1278,8 @@ body {
       display: flex;
   }
 }
-
+.ag-format-container{
+  width: 100%;
+}
 
 
