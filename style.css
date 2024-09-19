@@ -644,7 +644,6 @@ body {
 .title {
     font-family: 'DM Serif Display', serif;
     /* text-shadow: 1px 1px 4px rgb(85, 8, 8); */
-    text-shadow: 1px 1px 4px rgb(95, 3, 3);
 
     opacity: 0.95;
     animation: fadeIn 1.5s ease-in forwards;
