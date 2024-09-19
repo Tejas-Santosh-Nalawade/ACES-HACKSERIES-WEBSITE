@@ -1170,6 +1170,7 @@ padding: 50px 0;
     font-size: 16px;
   }
 }
+
     @media only screen and (max-width: 639px) {
   .ag-courses_item {
     -ms-flex-preferred-size: 100%;
@@ -1277,3 +1278,6 @@ body {
       display: flex;
   }
 }
+
+
+

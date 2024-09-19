@@ -91,7 +91,7 @@
             <h1 class="title fw-bold display-4 mb-4 text-highlight-section2">How Hack Series Helps Students?</h1>
             <p class="para paragraph2">Technical Proficiency: Participants develop a deeper understanding of various concepts and programming languages, preparing them for internships and hackathons. Problem-Solving Skills: Each session includes problem-solving tasks that push students to think critically and come up with creative solutions. Networking Opportunities: Participants can network with speakers, mentors, and peers, building valuable connections for future career opportunities.</p>
         </section>
-        <!-- Section 3: Roadmap events -->
+        <!-- Section 4: Roadmap events -->
          <section class="section4" id="Event">
           <div class="ag-format-container">
             <div class="ag-courses_box">
@@ -103,12 +103,12 @@
                    Web-Development
                   </div>
           
-                  <div class="ag-courses-item_date-box">
+                  <!-- <div class="ag-courses-item_date-box">
                     Start:
                     <span class="ag-courses-item_date">
                       20/09/2-24
                     </span>
-                  </div>
+                  </div> -->
                 </a>
               </div>
           
@@ -120,12 +120,12 @@
                     AI & ML - Basics to Advance
                   </div>
           
-                  <div class="ag-courses-item_date-box">
+                  <!-- <div class="ag-courses-item_date-box">
                     Start:
                     <span class="ag-courses-item_date">
                      coming soon
                     </span>
-                  </div>
+                  </div> -->
                 </a>
               </div>
           
@@ -137,12 +137,12 @@
                    Cloud Computing
                   </div>
           
-                  <div class="ag-courses-item_date-box">
+                  <!-- <div class="ag-courses-item_date-box">
                     Start:
                     <span class="ag-courses-item_date">
-                      coming soon
+                      20/09/2-24
                     </span>
-                  </div>
+                  </div> -->
                 </a>
               </div>
           
@@ -155,12 +155,12 @@
                     Programming Language
                   </div>
           
-                  <div class="ag-courses-item_date-box">
+                  <!-- <div class="ag-courses-item_date-box">
                     Start:
                     <span class="ag-courses-item_date">
                      coming soon
                     </span>
-                  </div>
+                  </div> -->
                 </a>
               </div>
           
@@ -172,12 +172,12 @@
                     Data Structure & Algorithms
                   </div>
           
-                  <div class="ag-courses-item_date-box">
+                  <!-- <div class="ag-courses-item_date-box">
                     Start:
                     <span class="ag-courses-item_date">
                      coming soon
                     </span>
-                  </div>
+                  </div> -->
                 </a>
               </div>
           
@@ -188,12 +188,12 @@
                   <div class="ag-courses-item_title">
                     Git & Github
                   </div>
-                  <div class="ag-courses-item_date-box">
+                  <!-- <div class="ag-courses-item_date-box">
                     Start:
                     <span class="ag-courses-item_date">
                      coming soon
                     </span>
-                  </div>
+                  </div> -->
                 </a>
               </div>
             </div>
@@ -201,26 +201,27 @@
          </section>
 
 
-
-        <section class="contact-section" id="Contact">
+         <section class="contact-section" id="Contact">
           <h2>Contact Us</h2>
           <div class="form-container">
             <form action="#" method="post" id="form">
               <label for="email">Email</label>
               <input type="email" id="email" name="email" placeholder="Enter your email" required>
-              
+        
               <label for="phone">Phone</label>
               <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
-              
+        
               <label for="message">Message/Query</label>
               <textarea id="message" name="message" placeholder="Write your message here" required style="height: 118px;"></textarea>
-              
+        
               <div class="center">
                 <button type="submit">Submit</button>
               </div>
             </form>
           </div>
         </section>
+        
+
         
         
 
@@ -260,19 +261,35 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script>
-      let url="https://script.google.com/macros/s/AKfycbzWMuEajUXjNABzWHesGEzyqVntxkBDaCGqtwAMOmVxqpd2WNJBO-2rQ7HFb6YOyHwb4w/exec"
-      let form= document.querySelector('#form');
-      form.addEventListener("submit",(e)=>{
-        let d=new FormData(form);
-        fetch(url,{
-          method:"POST",
-          body:d
-        }).then((res)=>res.text())
-        .then((finalRes)=>console.log(finalRes))
-        e.preventDefault();
-
-
-      })
+      document.addEventListener('DOMContentLoaded', () => {
+        const url = "https://script.google.com/macros/s/AKfycbzWMuEajUXjNABzWHesGEzyqVntxkBDaCGqtwAMOmVxqpd2WNJBO-2rQ7HFb6YOyHwb4w/exec";
+        const form = document.getElementById('form');
+    
+        form.addEventListener('submit', (e) => {
+          e.preventDefault(); // Prevent the default form submission
+    
+          const formData = new FormData(form);
+    
+          fetch(url, {
+            method: 'POST',
+            body: formData
+          })
+          .then(response => response.text())
+          .then(result => {
+            console.log(result);
+            alert('Your form has been submitted successfully!'); // Success message
+            form.reset(); // Reset form fields
+            setTimeout(() => {
+              window.location.reload(); // Reload the page after a short delay
+            }, 1000); // 1-second delay
+          })
+          .catch(error => {
+            console.error('Error:', error);
+            alert('There was an issue with your submission. Please try again.'); // Error message
+          });
+        });
+      });
+    </script>
 </script>
     <!-- AOS Animation library JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
