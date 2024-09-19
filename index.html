@@ -182,7 +182,7 @@
               </div>
           
               <div class="ag-courses_item">
-                <a href="#" class="ag-courses-item_link">
+                <a href="./docs/git-cheat-sheet-education.pdf" class="ag-courses-item_link">
                   <div class="ag-courses-item_bg"></div>
           
                   <div class="ag-courses-item_title">
@@ -201,25 +201,30 @@
          </section>
 
 
-         <section class="contact-section" id="Contact">
-          <h2>Contact Us</h2>
-          <div class="form-container">
-            <form action="#" method="post" id="form">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="Enter your email" required>
-        
-              <label for="phone">Phone</label>
-              <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
-        
-              <label for="message">Message/Query</label>
-              <textarea id="message" name="message" placeholder="Write your message here" required style="height: 118px;"></textarea>
-        
-              <div class="center">
-                <button type="submit">Submit</button>
-              </div>
-            </form>
-          </div>
-        </section>
+         <div class="form-container " id="Contact">
+          <h2 class="title fw-bold display-4 mb-4 text-highlight-section5">Contact Us</h2>
+          <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter Your Name" name="name" required>
+      
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter Your Email" name="email" required>
+      
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" placeholder="Enter Your Phone Number" name="phone" required>
+      
+            <label for="message">Message:</label>
+            <textarea id="message" name="message"  rows="4" required></textarea>
+      
+            <div class="button-container">
+              <input type="submit" value="Submit">
+              <input type="reset" value="Reset">
+            </div>
+          </form>
+      
+          <div id="responseMessage"></div>
+        </div>
+
         
 
         
@@ -260,37 +265,33 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+      
     <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const url = "https://script.google.com/macros/s/AKfycbzWMuEajUXjNABzWHesGEzyqVntxkBDaCGqtwAMOmVxqpd2WNJBO-2rQ7HFb6YOyHwb4w/exec";
-        const form = document.getElementById('form');
-    
-        form.addEventListener('submit', (e) => {
-          e.preventDefault(); // Prevent the default form submission
-    
-          const formData = new FormData(form);
-    
-          fetch(url, {
+      const form = document.getElementById('contactForm');
+      const responseMessage = document.getElementById('responseMessage');
+  
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+  
+        const formData = new FormData(form);
+        const endpoint = 'https://script.google.com/macros/s/AKfycbxMqguJm0Muas_Oq6R_5oHZaIIMA-XSqfSplTv4QZ1IUJOj-byQd1LrjGlL9xaJFMTq/exec'; // Replace with your Apps Script URL
+  
+        try {
+          const response = await fetch(endpoint, {
             method: 'POST',
             body: formData
-          })
-          .then(response => response.text())
-          .then(result => {
-            console.log(result);
-            alert('Your form has been submitted successfully!'); // Success message
-            form.reset(); // Reset form fields
-            setTimeout(() => {
-              window.location.reload(); // Reload the page after a short delay
-            }, 1000); // 1-second delay
-          })
-          .catch(error => {
-            console.error('Error:', error);
-            alert('There was an issue with your submission. Please try again.'); // Error message
           });
-        });
+  
+          const text = await response.text();
+          responseMessage.textContent = text;
+  
+          // Clear form after submission
+          form.reset();
+        } catch (error) {
+          responseMessage.textContent = 'An error occurred. Please try again.';
+        }
       });
     </script>
-</script>
     <!-- AOS Animation library JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
