@@ -1407,6 +1407,12 @@ input[type="reset"]:hover {
     opacity: 1;
   }
 }
+.text-highlight-section6{
+  margin: 0px;
+  padding: 5px;
+  color: #000;
+  background-color: #EEE6D8;
+}
 
 /* Responsive design for smaller screens */
 
