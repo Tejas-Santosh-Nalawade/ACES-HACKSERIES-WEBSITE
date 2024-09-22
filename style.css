@@ -1439,4 +1439,8 @@ input[type="reset"]:hover {
 }
 
 
+.hack-series {
+  white-space: nowrap;
+}
+
 
