@@ -210,7 +210,7 @@
 
          <div class="form-container " id="Contact">
           <h2 class="title fw-bold display-4 mb-4 text-highlight-section5">Reach Us Out</h2>
-          <form id="contactForm">
+          <form id="contactForm" >
             <label for="name">Name:</label>
             <input type="text" id="name" placeholder="Enter Your Name" name="name" required>
       
@@ -272,7 +272,7 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-      
+<!--       
     <script>
       const form = document.getElementById('contactForm');
       const responseMessage = document.getElementById('responseMessage');
@@ -298,7 +298,51 @@
           responseMessage.textContent = 'An error occurred. Please try again.';
         }
       });
+    </script> -->
+
+    <script>
+      document.getElementById('contactForm').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const formData = new FormData(e.target);
+        const responseMessage = document.getElementById('responseMessage');
+        const endpoint = 'https://script.google.com/macros/s/AKfycbxMqguJm0Muas_Oq6R_5oHZaIIMA-XSqfSplTv4QZ1IUJOj-byQd1LrjGlL9xaJFMTq/exec'; // Replace with your actual Apps Script URL
+    
+        // Display loader while processing
+        responseMessage.innerHTML = '<div class="loader"></div> Processing...';
+    
+        try {
+          const response = await fetch(endpoint, {
+            method: 'POST',
+            body: formData
+          });
+    
+          const result = await response.text();
+    
+          // Display success or error message
+          if (result.includes('success')) {
+            responseMessage.innerHTML = '✅ <span class="success">Data saved successfully!</span>';
+          } else {
+            responseMessage.innerHTML = '❌ <span class="error">Failed to save data. Please try again.</span>';
+          }
+    
+          // Fade out the message and reload after 2 seconds
+          setTimeout(() => {
+            responseMessage.classList.add('fade-out');
+            setTimeout(() => {
+              window.location.reload(); // Reloads the page after fade out
+            }, 1000); // Delays reload to allow the fade-out animation to complete
+          }, 2000); // Keep the message visible for 2 seconds
+        } catch (error) {
+          responseMessage.innerHTML = '❌ <span class="error">An error occurred. Please try again.</span>';
+        }
+      });
     </script>
+    
+    
+    
+    
+
     <!-- AOS Animation library JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
